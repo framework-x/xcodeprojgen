@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+Object.class_eval do
+  # TODO: consider removing this, only here to help debug
+  undef_method :id
+end
+
+require "fileutils"
+require "yaml"
+
+require "xcode"
+require "xcodeproj_gen"
+
+XcodeprojGen.generate

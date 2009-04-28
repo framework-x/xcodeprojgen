@@ -1,0 +1,8 @@
+* provide a way to add new frameworks
+* clearer separation between xcodeprojgen options and xcode merge options
+* including default project configurations for various project/target types
+* more high-level acceptance tests and examples
+* find or write an xcodeproj parser for better testing
+* remove destructive parsing from xcodeprojgen
+* make ignores configurable
+* removing hard coding of FrameworksGroup

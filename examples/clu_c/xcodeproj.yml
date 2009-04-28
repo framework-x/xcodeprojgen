@@ -1,0 +1,51 @@
+targets:
+  - name: clu_c
+    buildRules: []
+    dependencies: []
+    productInstallPath: $(HOME)/bin
+    productType: com.apple.product-type.tool
+    product:
+      explicitFileType: compiled.mach-o.executable
+      path: clu_c
+    build_phases:
+      sources:
+        files:
+          - main.c
+      copy_files:
+        files:
+          - clu_c.1
+        buildActionMask: 8
+        dstPath: /usr/share/man/man1/
+    build_configurations:
+      debug:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        COPY_PHASE_STRIP: NO
+        GCC_DYNAMIC_NO_PIC: NO
+        GCC_ENABLE_FIX_AND_CONTINUE: YES
+        GCC_MODEL_TUNING: G5
+        GCC_OPTIMIZATION_LEVEL: 0
+        INSTALL_PATH: /usr/local/bin
+        PRODUCT_NAME: clu_c
+      release:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+        GCC_MODEL_TUNING: G5
+        INSTALL_PATH: /usr/local/bin
+        PRODUCT_NAME: clu_c
+build_configurations:
+  debug:
+    ARCHS: $(ARCHS_STANDARD_32_BIT)
+    GCC_C_LANGUAGE_STANDARD: c99
+    GCC_OPTIMIZATION_LEVEL: 0
+    GCC_WARN_ABOUT_RETURN_TYPE: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    ONLY_ACTIVE_ARCH: YES
+    PREBINDING: NO
+    SDKROOT: macosx10.5
+  release:
+    ARCHS: $(ARCHS_STANDARD_32_BIT)
+    GCC_C_LANGUAGE_STANDARD: c99
+    GCC_WARN_ABOUT_RETURN_TYPE: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    PREBINDING: NO
+    SDKROOT: macosx10.5
