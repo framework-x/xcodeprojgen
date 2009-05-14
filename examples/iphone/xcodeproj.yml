@@ -1,0 +1,37 @@
+targets:
+  - name: IphoneApp
+    buildRules: []
+    dependencies: []
+    productType: com.apple.product-type.application
+    product:
+      explicitFileType: wrapper.application
+      path: IphoneApp.app
+    build_phases:
+      sources:
+        files:
+          - Classes/**/*.m
+          - main.m
+      frameworks:
+        - Foundation
+        - UIKit
+        - CoreGraphics
+    build_configurations:
+      debug:
+        ALWAYS_SEARCH_USER_PATHS: NO
+        COPY_PHASE_STRIP: NO
+        GCC_DYNAMIC_NO_PIC: NO
+        GCC_OPTIMIZATION_LEVEL: 0
+        GCC_PRECOMPILE_PREFIX_HEADER: YES
+        GCC_PREFIX_HEADER: IphoneApp_Prefix.pch
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_NAME: IphoneApp
+build_configurations:
+  debug:
+    ARCHS: "$(ARCHS_STANDARD_32_BIT)"
+#    "CODE_SIGN_IDENTITY[sdk=iphoneos*]": iPhone Developer
+    GCC_C_LANGUAGE_STANDARD: c99
+    GCC_WARN_ABOUT_RETURN_TYPE: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    ONLY_ACTIVE_ARCH: YES
+    PREBINDING: NO
+    SDKROOT: iphoneos2.0
