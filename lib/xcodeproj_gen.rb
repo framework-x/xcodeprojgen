@@ -98,6 +98,7 @@ class XcodeprojGen
       when "sources" : Xcode::PBXSourcesBuildPhase
       when "copy_files" : Xcode::PBXCopyFilesBuildPhase
       when "frameworks" : Xcode::PBXFrameworksBuildPhase
+      when "headers" : Xcode::PBXHeadersBuildPhase
       else raise("#{phase_type} is not yet supported")
       end
       if phase_type == "frameworks"
