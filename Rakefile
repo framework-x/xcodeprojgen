@@ -17,7 +17,7 @@ end
 gem_spec = Gem::Specification.new do |s|
 	s.name   = "xcodeprojgen"
   s.summary = "generates xcodeproj files"
-	s.version = "0.1.0"
+	s.version = "0.1.1"
 	s.author = "Dan Manges"
 	s.description = s.summary
 	s.email = "daniel.manges@gmail.com"
